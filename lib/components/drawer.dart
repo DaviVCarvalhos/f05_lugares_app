@@ -52,6 +52,13 @@ class MeuDrawer extends StatelessWidget {
               Navigator.of(context).pushNamed('/gerenciarLugares');
             },
           ),
+          ListTile(
+            leading: Icon(Icons.public),
+            title: Text('Gerenciar Países'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/gerenciarPaises');
+            },
+          ),
         ],
       ),
     );

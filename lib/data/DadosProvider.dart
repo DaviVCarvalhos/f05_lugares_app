@@ -4,7 +4,7 @@ import 'package:f05_lugares_app/model/lugar.dart';
 
 // Classe que gerencia o estado da lista de lugares e dos favoritos
 class LugarProvider with ChangeNotifier {
-  List<Pais> paises = const [
+  List<Pais> paises = [
     Pais(
       id: 'c1',
       titulo: 'Estados Unidos',
@@ -172,5 +172,27 @@ class LugarProvider with ChangeNotifier {
       );
       notifyListeners();
     }
+  }
+
+  void adicionarPais(Pais novoPais) {
+    paises.add(novoPais);
+    notifyListeners();
+  }
+
+  void alterarPais(String id, String novoTitulo) {
+    final paisIndex = paises.indexWhere((p) => p.id == id);
+    if (paisIndex >= 0) {
+      paises[paisIndex] = Pais(
+        id: id,
+        titulo: novoTitulo,
+        cor: paises[paisIndex].cor,
+      );
+      notifyListeners();
+    }
+  }
+
+  void removerPais(Pais pais) {
+    paises.removeWhere((p) => p.id == pais.id);
+    notifyListeners();
   }
 }

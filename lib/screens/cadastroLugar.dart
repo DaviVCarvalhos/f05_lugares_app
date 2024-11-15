@@ -12,8 +12,12 @@ class CadastroLugarPage extends StatelessWidget {
   final TextEditingController _recomendacoesController =
       TextEditingController();
 
+  String? _paisSelecionado; // Armazena o ID do país selecionado
+
   @override
   Widget build(BuildContext context) {
+    final paises = Provider.of<LugarProvider>(context).paises;
+
     void _cadastrarLugar() {
       final String titulo = _tituloController.text;
       final String imagemUrl = _imagemUrlController.text;
@@ -23,7 +27,7 @@ class CadastroLugarPage extends StatelessWidget {
       final List<String> recomendacoes =
           _recomendacoesController.text.split(',');
 
-      if (titulo.isEmpty || imagemUrl.isEmpty) {
+      if (titulo.isEmpty || imagemUrl.isEmpty || _paisSelecionado == null) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('Preencha todos os campos obrigatórios.'),
@@ -52,7 +56,7 @@ class CadastroLugarPage extends StatelessWidget {
         avaliacao: avaliacao,
         custoMedio: custoMedio,
         recomendacoes: recomendacoes,
-        paises: ['c1'],
+        paises: [_paisSelecionado!], // Vincula o lugar ao país selecionado
       );
 
       Provider.of<LugarProvider>(context, listen: false)
@@ -99,6 +103,26 @@ class CadastroLugarPage extends StatelessWidget {
               controller: _recomendacoesController,
               decoration: InputDecoration(
                   labelText: 'Recomendações (separadas por vírgula)'),
+            ),
+            SizedBox(height: 20),
+            DropdownButtonFormField<String>(
+              value: _paisSelecionado,
+              decoration: InputDecoration(labelText: 'Selecione o País'),
+              items: paises.map((pais) {
+                return DropdownMenuItem<String>(
+                  value: pais.id,
+                  child: Text(pais.titulo),
+                );
+              }).toList(),
+              onChanged: (value) {
+                _paisSelecionado = value;
+              },
+              validator: (value) {
+                if (value == null) {
+                  return 'Por favor, selecione um país.';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 20),
             ElevatedButton(
