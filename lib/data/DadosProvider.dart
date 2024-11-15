@@ -4,49 +4,48 @@ import 'package:f05_lugares_app/model/lugar.dart';
 
 // Classe que gerencia o estado da lista de lugares e dos favoritos
 class LugarProvider with ChangeNotifier {
-
   List<Pais> paises = const [
-  Pais(
-    id: 'c1',
-    titulo: 'Estados Unidos',
-    cor: Colors.purple,
-  ),
-  Pais(
-    id: 'c2',
-    titulo: 'Canada',
-    cor: Colors.red,
-  ),
-  Pais(
-    id: 'c3',
-    titulo: 'Suiça',
-    cor: Colors.orange,
-  ),
-  Pais(
-    id: 'c4',
-    titulo: 'Chile',
-    cor: Colors.amber,
-  ),
-  Pais(
-    id: 'c5',
-    titulo: 'Espanha',
-    cor: Colors.amber,
-  ),
-  Pais(
-    id: 'c6',
-    titulo: 'Peru',
-    cor: Colors.lightBlue,
-  ),
-  Pais(
-    id: 'c7',
-    titulo: 'Brasil',
-    cor: Colors.lightGreen,
-  ),
-  Pais(
-    id: 'c8',
-    titulo: 'Egito',
-    cor: Colors.teal,
-  ),
-];
+    Pais(
+      id: 'c1',
+      titulo: 'Estados Unidos',
+      cor: Colors.purple,
+    ),
+    Pais(
+      id: 'c2',
+      titulo: 'Canada',
+      cor: Colors.red,
+    ),
+    Pais(
+      id: 'c3',
+      titulo: 'Suiça',
+      cor: Colors.orange,
+    ),
+    Pais(
+      id: 'c4',
+      titulo: 'Chile',
+      cor: Colors.amber,
+    ),
+    Pais(
+      id: 'c5',
+      titulo: 'Espanha',
+      cor: Colors.amber,
+    ),
+    Pais(
+      id: 'c6',
+      titulo: 'Peru',
+      cor: Colors.lightBlue,
+    ),
+    Pais(
+      id: 'c7',
+      titulo: 'Brasil',
+      cor: Colors.lightGreen,
+    ),
+    Pais(
+      id: 'c8',
+      titulo: 'Egito',
+      cor: Colors.teal,
+    ),
+  ];
   List<Lugar> _lugares = [
     Lugar(
       id: 'p1',
@@ -77,61 +76,61 @@ class LugarProvider with ChangeNotifier {
       imagemUrl:
           'https://images.memphistours.com/large/60e4be05c4ef4373c71802b0dd3f9e62.jpg',
     ),
-     Lugar(
-    id: 'p3',
-    titulo: 'Deserto',
-    paises: ['c10', 'c4'],
-    avaliacao: 4.1,
-    custoMedio: 20,
-    recomendacoes: [
-      '1. Leve protetor solar',
-      '2. Leva uma reserva de água',
-      '3. roupas de lã'
-    ],
-    imagemUrl:
-        'https://s4.static.brasilescola.uol.com.br/be/2021/11/deserto.jpg',
-  ),
-  Lugar(
-    id: 'p4',
-    titulo: 'Monumentos Antigos',
-    paises: ['c10', 'c5', 'c6'],
-    avaliacao: 4.7,
-    custoMedio: 45,
-    recomendacoes: [
-      '1. Tenis leve para caminhada',
-      '2. Procure um guia',
-      '3. Contribua para preservação'
-    ],
-    imagemUrl:
-        'https://img.freepik.com/fotos-gratis/tiro-de-angulo-baixo-dos-antigos-pilares-de-pedra-grega-com-um-ceu-azul-claro_181624-2890.jpg',
-  ),
-  Lugar(
-    id: 'p5',
-    titulo: 'Monumentos Modernos',
-    paises: ['c1'],
-    avaliacao: 4.2,
-    custoMedio: 30,
-    recomendacoes: [
-      '1. Tenis leve para caminhada',
-      '2. Passeios em grupo',
-    ],
-    imagemUrl:
-        'https://www.infoescola.com/wp-content/uploads/2009/03/estatua-da-liberdade.jpg',
-  ),
-  Lugar(
-    id: 'p6',
-    titulo: 'Maravilhas da Natureza',
-    paises: ['c2', 'c8', 'c7'],
-    avaliacao: 4.4,
-    custoMedio: 40,
-    recomendacoes: [
-      '1. Tenis leve para caminhada',
-      '2. Passeios em grupo e com guia',
-      '3. Contribua para preservação'
-    ],
-    imagemUrl:
-        'https://img.freepik.com/fotos-gratis/cachoeira-do-parque-nacional-do-iguacu-cercada-por-florestas-cobertas-pela-nevoa-sob-um-ceu-nublado_181624-14415.jpg',
-  ),
+    Lugar(
+      id: 'p3',
+      titulo: 'Deserto',
+      paises: ['c10', 'c4'],
+      avaliacao: 4.1,
+      custoMedio: 20,
+      recomendacoes: [
+        '1. Leve protetor solar',
+        '2. Leva uma reserva de água',
+        '3. roupas de lã'
+      ],
+      imagemUrl:
+          'https://s4.static.brasilescola.uol.com.br/be/2021/11/deserto.jpg',
+    ),
+    Lugar(
+      id: 'p4',
+      titulo: 'Monumentos Antigos',
+      paises: ['c10', 'c5', 'c6'],
+      avaliacao: 4.7,
+      custoMedio: 45,
+      recomendacoes: [
+        '1. Tenis leve para caminhada',
+        '2. Procure um guia',
+        '3. Contribua para preservação'
+      ],
+      imagemUrl:
+          'https://img.freepik.com/fotos-gratis/tiro-de-angulo-baixo-dos-antigos-pilares-de-pedra-grega-com-um-ceu-azul-claro_181624-2890.jpg',
+    ),
+    Lugar(
+      id: 'p5',
+      titulo: 'Monumentos Modernos',
+      paises: ['c1'],
+      avaliacao: 4.2,
+      custoMedio: 30,
+      recomendacoes: [
+        '1. Tenis leve para caminhada',
+        '2. Passeios em grupo',
+      ],
+      imagemUrl:
+          'https://www.infoescola.com/wp-content/uploads/2009/03/estatua-da-liberdade.jpg',
+    ),
+    Lugar(
+      id: 'p6',
+      titulo: 'Maravilhas da Natureza',
+      paises: ['c2', 'c8', 'c7'],
+      avaliacao: 4.4,
+      custoMedio: 40,
+      recomendacoes: [
+        '1. Tenis leve para caminhada',
+        '2. Passeios em grupo e com guia',
+        '3. Contribua para preservação'
+      ],
+      imagemUrl:
+          'https://img.freepik.com/fotos-gratis/cachoeira-do-parque-nacional-do-iguacu-cercada-por-florestas-cobertas-pela-nevoa-sob-um-ceu-nublado_181624-14415.jpg',
+    ),
   ];
 
   List<Lugar> _favoritos = [];
@@ -152,5 +151,26 @@ class LugarProvider with ChangeNotifier {
       _favoritos.remove(lugar);
     }
     notifyListeners(); // Notifica a UI para atualizar os favoritos
+  }
+
+  void removerLugar(Lugar lugar) {
+    _lugares.removeWhere((l) => l.id == lugar.id);
+    notifyListeners();
+  }
+
+  void alterarLugar(String id, String novoTitulo, String novaImagemUrl) {
+    final lugarIndex = _lugares.indexWhere((l) => l.id == id);
+    if (lugarIndex >= 0) {
+      _lugares[lugarIndex] = Lugar(
+        id: id,
+        titulo: novoTitulo,
+        imagemUrl: novaImagemUrl,
+        paises: _lugares[lugarIndex].paises,
+        recomendacoes: _lugares[lugarIndex].recomendacoes,
+        avaliacao: _lugares[lugarIndex].avaliacao,
+        custoMedio: _lugares[lugarIndex].custoMedio,
+      );
+      notifyListeners();
+    }
   }
 }

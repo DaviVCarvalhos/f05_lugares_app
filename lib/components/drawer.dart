@@ -36,14 +36,20 @@ class MeuDrawer extends StatelessWidget {
               Navigator.of(context).pushReplacementNamed(
                 '/configuracoes',
               );
-
             },
           ),
-           ListTile(
+          ListTile(
             leading: Icon(Icons.place),
             title: Text('Cadastrar Lugar'),
             onTap: () {
-              Navigator.of(context).pushNamed('/cadastroLugar'); // Navega para a tela de cadastro
+              Navigator.of(context).pushNamed('/cadastroLugar');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.place),
+            title: Text('Gerenciar Lugares'),
+            onTap: () {
+              Navigator.of(context).pushNamed('/gerenciarLugares');
             },
           ),
         ],

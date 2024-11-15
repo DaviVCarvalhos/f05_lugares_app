@@ -1,5 +1,6 @@
 import 'package:f05_lugares_app/data/DadosProvider.dart';
 import 'package:f05_lugares_app/model/FavoritosProvider.dart';
+import 'package:f05_lugares_app/screens/GerenciarLugares.dart';
 
 import 'package:f05_lugares_app/screens/abas.dart';
 import 'package:f05_lugares_app/screens/cadastroLugar.dart';
@@ -34,6 +35,7 @@ class MeuApp extends StatelessWidget {
         '/detalheLugar': (ctx) => DetalhesLugarScreen(),
         '/configuracoes': (ctx) => ConfigracoesScreen(),
         '/cadastroLugar': (ctx) => CadastroLugarPage(),
+        '/gerenciarLugares': (ctx) => GerenciarLugaresScreen(),
       },
     );
   }
