@@ -12,6 +12,6 @@ class FavoritosProvider with ChangeNotifier {
     } else {
       _lugaresFavoritos.add(lugar);
     }
-    notifyListeners(); // Notifica a UI sobre a mudança no estado
+    notifyListeners();
   }
 }
