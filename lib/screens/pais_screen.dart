@@ -1,17 +1,15 @@
 import 'package:f05_lugares_app/components/item_pais.dart';
 import 'package:f05_lugares_app/data/DadosProvider.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart'; 
+import 'package:provider/provider.dart';
 
 class PaisScreen extends StatelessWidget {
   const PaisScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Acessando a lista de países do LugarProvider
     final paises = Provider.of<LugarProvider>(context).paises;
 
-    // Gerando a lista de widgets para os países
     List<Widget> getPaises() {
       return paises.map((pais) => ItemPais(pais: pais)).toList();
     }

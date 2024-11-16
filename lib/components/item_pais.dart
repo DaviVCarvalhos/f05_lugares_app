@@ -28,14 +28,10 @@ class ItemPais extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
-            gradient: LinearGradient(
-                colors: [
-                  _pais.cor.withOpacity(0.5), //cor passad com opacidade
-                  _pais.cor, //cor passada
-                ],
-                begin: Alignment.topLeft, //inicio do gradiente
-                end: Alignment.bottomRight // fim
-                ),
+            gradient: LinearGradient(colors: [
+              _pais.cor.withOpacity(0.5),
+              _pais.cor,
+            ], begin: Alignment.topLeft, end: Alignment.bottomRight),
           ),
         ),
       ),

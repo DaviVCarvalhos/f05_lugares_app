@@ -56,7 +56,7 @@ class CadastroLugarPage extends StatelessWidget {
         avaliacao: avaliacao,
         custoMedio: custoMedio,
         recomendacoes: recomendacoes,
-        paises: [_paisSelecionado!], // Vincula o lugar ao país selecionado
+        paises: [_paisSelecionado!],
       );
 
       Provider.of<LugarProvider>(context, listen: false)

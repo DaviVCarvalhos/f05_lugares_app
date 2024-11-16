@@ -133,24 +133,11 @@ class LugarProvider with ChangeNotifier {
     ),
   ];
 
-  List<Lugar> _favoritos = [];
-
   List<Lugar> get lugares => _lugares;
-
-  List<Lugar> get favoritos => _favoritos;
 
   void adicionarLugar(Lugar novoLugar) {
     _lugares.add(novoLugar);
-    notifyListeners(); // Notifica a UI para atualizar
-  }
-
-  void favoritarLugar(Lugar lugar) {
-    if (!_favoritos.contains(lugar)) {
-      _favoritos.add(lugar);
-    } else {
-      _favoritos.remove(lugar);
-    }
-    notifyListeners(); // Notifica a UI para atualizar os favoritos
+    notifyListeners();
   }
 
   void removerLugar(Lugar lugar) {
